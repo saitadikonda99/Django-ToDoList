@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 20vh;
+    width: 100%;
+    color: rgb(164, 159, 159);
+}
+
+.container-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    gap: 20px;
+}
+
+.container input[type=text] {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container button {
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container-head {
+    height: 50vh;
+    width: 100%;
+}

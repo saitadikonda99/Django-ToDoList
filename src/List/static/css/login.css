@@ -1,0 +1,57 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container-in {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form */
+.form-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style for form inputs */
+.form-div input[type="text"],
+.form-div input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the forgot password link */
+.form-div a {
+  text-align: right;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Style for the submit button */
+.form-div button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-div button:hover {
+  background-color: #0056b3;
+}
+

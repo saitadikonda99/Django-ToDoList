@@ -1,0 +1,23 @@
+# Ignore virtual environment files
+bin/
+lib/
+pyvenv.cfg
+
+# Ignore other generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore database files (if applicable)
+*.sqlite3
+
+# Ignore IDE-specific files
+.vscode/
+*.idea/
+
+# Ignore local development settings (if applicable)
+local_settings.py
+
+# Ignore Django migration files (optional)
+*.py[m|c]  
+
