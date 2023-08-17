@@ -9,9 +9,11 @@ body {
   /* Style for the registration container */
   .register-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 4vw;
   }
   
   .register-container-in {
@@ -23,13 +25,13 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style for the registration form */
+
   .register-form {
     display: flex;
     flex-direction: column;
   }
   
-  /* Style for form inputs */
+
   .register-form input[type="text"],
   .register-form input[type="password"],
   .register-form input[type="email"] {
@@ -55,5 +57,22 @@ body {
     background-color: #0056b3;
   }
   
+  .register-five {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .register-five a {
+    text-decoration: none;
+  }
   /* Additional styles can be added for more customization */
   
+
+  .error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+  }

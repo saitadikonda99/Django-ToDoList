@@ -4,21 +4,32 @@
 
 <div class="login-container">
     <div class="login-container-in">
-        <form action="" class="form-div">
+        <form  method="post" class="form-div">
+            {% csrf_token %}
             <div class="form-one">
-             <input type="text" placeholder="Enter your username">
+                <label for="username">username*</label>
+             <input type="text" name="username" placeholder="Enter your username">
             </div>
             <div class="form-two">
-                <input type="password" placeholder="password">
+                <label for="username">password*</label>
+                <input type="password" name="password" placeholder="password">
             </div>
             <div class="form-three">
                 <a href="">forgot password?</a>
             </div>
             <div class="form-four">
                 <button>submit</button>
+                <span> <a href="{% url 'register_page' %}">new user? register</a> </span>
             </div>
         </form>
     </div>
+
+    {% if error %}
+    <div class="error-message">
+        {{ error }}
+     </div>  
+    {%endif%}
+    
 </div>
 
 {%endblock%}

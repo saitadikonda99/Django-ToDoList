@@ -3,16 +3,25 @@
 {% block content %}
     
   <div class="container">
-    <div class="container-logo">
-        <h1>Todo List App</h1>
+    <div class="container-nav">
+      <div class="nav-logo">
+        <h1>TodoList</h1>
     </div>
+      <div class="nav-button">
+        <a href="{% url 'login_page' %}">
+          <button>Logout</button>
+        </a>
+      </div>
+    </div>
+     
     <div class="container-in">
       <input type="text" placeholder="Enter your task">
        <button>Submit</button>
        </div>
          <div class="container-head">
-            
     </div>
+
+    
   </div>
 
     {% endblock %}

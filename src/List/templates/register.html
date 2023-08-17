@@ -4,24 +4,31 @@
 
  <div class="register-container">
     <div class="register-container-in">
-        <form action="" class="register-form">
+        <form method="post" class="register-form">
+            {% csrf_token %}
             <div class="register-one">
-                <input type="text" placeholder="username">
+                <input type="text" name="username" placeholder="username">
             </div>
             <div class="register-two">
-                <input type="password" placeholder="password">
+                <input type="email" name="email" placeholder="email">
             </div>
             <div class="register-three">
-                <input type="password" placeholder="confirm password">
+                <input type="password" name="password" placeholder="confirm password">
             </div>
             <div class="register-four">
-                <input type="email" placeholder="email">
+                <input type="password" name="confirm_password" placeholder="confirm password">
             </div>
             <div class="register-five">
                <button>submit</button>
+               <a href="{% url 'login_page' %}">already a user? login</a>
             </div>
         </form>
     </div>
+    {% if error %}
+    <div class="error-message">
+        {{ error }}
+     </div>  
+    {%endif%}
  </div>
 
  {%endblock%}
