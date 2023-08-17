@@ -24,7 +24,7 @@
   gap: 20px;
 }
 
-.form-one, .form-two{
+.form-one, .form-two, .form-four{
   display: flex;
   flex-direction: column;
   gap: 5px;

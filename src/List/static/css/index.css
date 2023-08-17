@@ -23,17 +23,17 @@
 }
 
 
-.container-in {
+.container-in form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     gap: 20px;
 }
 
-.container input[type=text] {
-    width: 50%;
+.container-in input[type=text] {
+    width: 40%;
     height: 50px;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -42,12 +42,7 @@
     font-size: 20px;
 }
 
-.form-four {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-}
+ 
 
 .container button {
     border: none;
@@ -60,4 +55,23 @@
 .container-head {
     height: 50vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    border: 2px solid black;
 }
+
+.container-head-in {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-div {
+    border: 2px solid black;
+}
+
+.task-date {
+    border: 2px solid black;
+}
+

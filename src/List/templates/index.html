@@ -15,10 +15,24 @@
     </div>
      
     <div class="container-in">
-      <input type="text" placeholder="Enter your task">
-       <button>Submit</button>
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="task"  placeholder="Enter your task">
+        <input type="date" name="date"   placeholder="time">
+        <button>Submit</button>
+      </form>
        </div>
          <div class="container-head">
+          <div class="container-head-in"> 
+          {% for todo in todos %}
+           <div class="task-div">
+            {{ todo.task }}
+           </div>
+           <div class="task-date">
+            {{ todo.date }}
+           </div>
+          </div>
+        {% endfor %}
     </div>
 
     

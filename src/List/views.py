@@ -8,7 +8,21 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='login_page')
 def todo(request):
-    return render(request, 'index.html')
+    
+    if request.method == 'POST':
+        task = request.POST.get('task')
+        date = request.POST.get('date')
+        
+        todo = Todo.objects.create(
+            task=task,
+            date=date,
+            )
+
+        todo.save()
+        
+        return redirect('todo')
+        
+    return render(request, 'index.html', {'todos': Todo.objects.all()})
 
 
 def login_page(request):
