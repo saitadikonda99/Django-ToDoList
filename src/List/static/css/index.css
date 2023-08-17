@@ -22,15 +22,25 @@
     color: rgb(82, 79, 79);
 }
 
+.container-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
 
 .container-in form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    width: 100%;
+    height: 25vh;
+    width: 80%;
     gap: 20px;
+    border-bottom: 1px solid #ccc;
 }
+
 
 .container-in input[type=text] {
     width: 40%;
@@ -41,8 +51,6 @@
     padding: 10px;
     font-size: 20px;
 }
-
- 
 
 .container button {
     border: none;
@@ -58,20 +66,30 @@
     display: flex;
     justify-content: center;
     color: black;
-    border: 2px solid black;
+    padding: 20px;
 }
 
 .container-head-in {
+    width: 100%;
+}
+
+.task-item {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
 }
 
-.task-div {
-    border: 2px solid black;
+.todo-task {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
 }
 
-.task-date {
-    border: 2px solid black;
+.done-button a {
+    color: white;
+    text-decoration: none;
 }
 
+
+ 

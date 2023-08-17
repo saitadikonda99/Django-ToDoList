@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", todo, name="todo"),
     path("login/", login_page, name="login_page"),
+    path("delete/<int:id>/", delete_task ,name="delete_task"),
     path("register/", register_page, name="register_page"),
 ]
 

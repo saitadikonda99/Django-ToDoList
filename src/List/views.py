@@ -11,19 +11,29 @@ def todo(request):
     
     if request.method == 'POST':
         task = request.POST.get('task')
-        date = request.POST.get('date')
+        time = request.POST.get('time')
+        
+        if time is None or time == '':
+            return render(request, 'index.html', {'error': 'Time cannot be empty'})
+        
+        if task is None or task == '':
+            return render(request, 'index.html', {'error': 'Task cannot be empty'})
         
         todo = Todo.objects.create(
             task=task,
-            date=date,
+            time=time,
             )
-
+        
         todo.save()
         
         return redirect('todo')
         
     return render(request, 'index.html', {'todos': Todo.objects.all()})
 
+def delete_task(request, id):
+     delete_task = Todo.objects.get(id=id)
+     delete_task.delete()
+     return redirect('todo')
 
 def login_page(request):
     if request.method == 'POST':

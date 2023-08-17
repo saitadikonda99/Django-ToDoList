@@ -1,8 +1,8 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 
 
 class Todo(models.Model):
-    date = models.DateField()
+    time = models.TimeField(default=timezone.now)  
     task = models.TextField()
